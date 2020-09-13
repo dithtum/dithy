@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="Edith" content="a digital clock">
+    <link rel="stylesheet" href="clock.css">
+  </head>
+  <body>
+    <div id="clock">
+      <div id="hour"></div>
+      <div id="min"></div>
+      <div id="sec"></div>
+      </div>
+  <style>
+body{
+  background-color: #13c7f393;
+}
+#clock{
+    height: 70px;
+width:150px;
+background-color:black;
+border-radius:10px;
+position:relative;
+display:flex;
+align-items: center;
+margin:30%;
+box-shadow: 0 0 5px 5px #2e28e4,0 0 10px 10px #de3f64; 
+}
+#hour{
+  font-size:30px;
+  color:#3472ed;
+}
+#min{
+  font-size:30px;
+  color:#3472ed;
+}
+#sec{
+  font-size:30px;
+  color:#3472ed;
+}
+  </style>
+   
+   <script>
+   setInterval(()=>{
+     let date=new Date();
+     let day=date.getHours();
+    let Hday=document.querySelector("#hour");
+    let hours=day
+     Hday.textContent=hours + " ";
+     let minute=date.getMinutes();
+     let mins=document.querySelector("#min");
+     mins.textContent=" : "+minute;
+     let second=date.getSeconds();
+     let sec=document.querySelector("#sec");
+   sec.textContent=' : '+second
+},100);
+
+   </script>
+  </body>
+</html>
